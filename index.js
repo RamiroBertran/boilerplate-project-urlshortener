@@ -33,6 +33,8 @@ app.post("/api/shorturl", (req, res) => {
         console.error(err);
         return;
       } else {
+        let shorturl = Math.round(Math.random() * 10000);
+        console.log(shorturl);
         res.json({ url: parseUrl.href });
       }
     });
